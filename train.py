@@ -15,6 +15,7 @@ from config import Config
 from torch.nn import DataParallel
 from torch.optim.lr_scheduler import StepLR
 from test import *
+import torchvision.transforms as T
 
 
 def save_model(model, save_path, name, iter_cnt):
@@ -30,7 +31,16 @@ if __name__ == '__main__':
         visualizer = Visualizer()
     device = torch.device("cuda")
 
-    train_dataset = Dataset(opt.train_root, opt.train_list, phase='train', input_shape=opt.input_shape)
+    train_transforms = T.Compose([
+            T.Grayscale(), 
+            T.RandomCrop(opt.input_shape[1:]),
+            T.RandomHorizontalFlip(),
+            T.ToTensor(),
+            T.Normalize(mean=[0.5], std=[0.5]),
+        ])
+
+    train_dataset = torchvision.datasets.ImageFolder(opt.train_root, transform=train_transforms)
+    #train_dataset = Dataset(opt.train_root, opt.train_list, phase='train', input_shape=opt.input_shape)
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.train_batch_size,
                                   shuffle=True,

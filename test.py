@@ -162,7 +162,6 @@ if __name__ == '__main__':
     # load_model(model, opt.test_model_path)
     model.load_state_dict(torch.load(opt.test_model_path))
     model.to(torch.device("cuda"))
-
     identity_list = get_lfw_list(opt.lfw_test_list)
     img_paths = [os.path.join(opt.lfw_root, each) for each in identity_list]
 
