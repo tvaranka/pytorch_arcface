@@ -12,16 +12,22 @@ class Config(object):
     finetune = False
 
     #train_root = '/data/Datasets/webface/CASIA-maxpy-clean-crop-144/'
-    train_root = 'data/Datasets/CASIA-maxpy-clean'
+    #train_root = 'data/Datasets/CASIA-maxpy-clean'
     #train_list = '/data/Datasets/webface/train_data_13938.txt'
-    train_list = 'data/Datasets/cleaned_list.txt'
+    #train_list = 'data/Datasets/cleaned_list.txt'
+    # Paths for kaggle
+    train_root = '../input/webface-cleaned/CASIA-maxpy-clean/CASIA-maxpy-clean'
+    train_list = '../input/webface-cleaned/cleaned_list.txt pytorch_arcface'
     val_list = '/data/Datasets/webface/val_data_13938.txt'
 
     test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
     test_list = 'test.txt'
-
-    lfw_root = 'data/Datasets/lfw-align-128'
-    lfw_test_list = 'data/Datasets/lfw_test_pair.txt'
+    
+    # Paths for kaggle
+    lfw_root = '../input/lwf-aligned-128/lfw-align-128'
+    lfw_test_list = '../input/lwf-aligned-128/lfw_test_pair.txt'
+    #lfw_root = 'data/Datasets/lfw-align-128'
+    #lfw_test_list = 'data/Datasets/lfw_test_pair.txt'
 
     checkpoints_path = 'checkpoints'
     load_model_path = 'models/resnet18.pth'
