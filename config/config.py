@@ -24,7 +24,7 @@ class Config(object):
     test_list = 'test.txt'
     
     # Paths for kaggle
-    lfw_root = '../../input/lwf-aligned-128/lfw-align-128'
+    lfw_root = '../../input/lwf-aligned-128/lfw-align-128/lfw-align-128'
     lfw_test_list = '../../input/lwf-aligned-128/lfw_test_pair.txt'
     #lfw_root = 'data/Datasets/lfw-align-128'
     #lfw_test_list = 'data/Datasets/lfw_test_pair.txt'
