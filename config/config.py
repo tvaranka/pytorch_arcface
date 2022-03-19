@@ -16,16 +16,16 @@ class Config(object):
     #train_list = '/data/Datasets/webface/train_data_13938.txt'
     #train_list = 'data/Datasets/cleaned_list.txt'
     # Paths for kaggle
-    train_root = '../input/webface-cleaned/CASIA-maxpy-clean/CASIA-maxpy-clean'
-    train_list = '../input/webface-cleaned/cleaned_list.txt pytorch_arcface'
+    train_root = '../../input/webface-cleaned/CASIA-maxpy-clean/CASIA-maxpy-clean'
+    train_list = '../../input/webface-cleaned/cleaned_list.txt pytorch_arcface'
     val_list = '/data/Datasets/webface/val_data_13938.txt'
 
     test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
     test_list = 'test.txt'
     
     # Paths for kaggle
-    lfw_root = '../input/lwf-aligned-128/lfw-align-128'
-    lfw_test_list = '../input/lwf-aligned-128/lfw_test_pair.txt'
+    lfw_root = '../../input/lwf-aligned-128/lfw-align-128'
+    lfw_test_list = '../../input/lwf-aligned-128/lfw_test_pair.txt'
     #lfw_root = 'data/Datasets/lfw-align-128'
     #lfw_test_list = 'data/Datasets/lfw_test_pair.txt'
 
