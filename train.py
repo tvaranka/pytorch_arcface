@@ -40,7 +40,7 @@ if __name__ == '__main__':
         ])
 
     train_dataset = torchvision.datasets.ImageFolder(opt.train_root, transform=train_transforms)
-    train_dataset = data.Subset(train_dataset, list(range(20000)))
+    train_dataset = data.Subset(train_dataset, list(range(50000)))
     #train_dataset = Dataset(opt.train_root, opt.train_list, phase='train', input_shape=opt.input_shape)
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.train_batch_size,
